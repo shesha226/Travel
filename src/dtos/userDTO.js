@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-// Register User Validation
+
 export const registerUserDTO = Joi.object({
     name: Joi.string()
         .min(2)
@@ -62,7 +62,7 @@ export const registerUserDTO = Joi.object({
         })
 });
 
-// Login User Validation
+
 export const loginUserDTO = Joi.object({
     email: Joi.string()
         .email()
@@ -81,7 +81,7 @@ export const loginUserDTO = Joi.object({
         })
 });
 
-// Update User Validation
+
 export const updateUserDTO = Joi.object({
     name: Joi.string()
         .min(2)

@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
+import experienceRoutes from "./routes/experienceRoutes.js";
 dotenv.config();
 connectDB();
 
@@ -33,6 +34,7 @@ app.use((err, req, res, next) => {
 });
 
 app.use('/api/users', userRoutes);
+app.use('/api/experiences', experienceRoutes);
 
 const port = process.env.PORT || 3000;
 
